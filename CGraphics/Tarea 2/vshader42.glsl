@@ -9,8 +9,11 @@
  *   on from the OpenGL program as uniform variables of type mat4.
  ***************************/
 
-#version 130
- 
+// #version 150  // YJC: Comment/un-comment this line to resolve compilation errors
+                 //      due to different settings of the default GLSL version
+
+#version 130 
+
 in  vec3 vPosition;
 in  vec3 vColor;
 out vec4 color;

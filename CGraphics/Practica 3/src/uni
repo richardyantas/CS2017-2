@@ -1,0 +1,51 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+class Point{
+    int m_a,m_b,m_c;
+public:
+    Point(){}
+    Point(int a,int b,int c){
+        m_a = a;
+        m_b = b;
+        m_c = c;
+    }
+    void PrintPoint(){
+        cout << m_a << " " << m_b << " " << m_c << endl;
+    }
+};
+
+int main()
+{
+    Point B[3];
+    B[0] = Point(1,1,1);
+    B[0].PrintPoint();
+    
+    
+    Point* a;
+    a = new Point[3];
+    a = new Point[2];
+    //a = new Point(1,2,3);
+
+    //a[1] = Point(2,2,2);
+   
+    //B[0].PrintPoint();
+    
+    //a[0].PrintPoint();
+    //(*a).PrintPoint();
+    
+    ( *(a-1) ).PrintPoint();
+    return 0;
+}
+
+
+

@@ -1,12 +1,8 @@
-CC = g++
-CFLAGS = -Wall -lGL -lGLU -lglut -lGLEW 
-
-OBJ_DIR = obj
-SRC_DIR = src
-LIB_DIR = lib 
-INC_DIR = inc
-
-main: $(SRC_DIR)/main.cpp 
-	$(CC) $(SRC_DIR)/main.cpp -o output $(CFLAGS) 
+output: main.o InitShader.o
+	g++ main.o InitShader.o -o output -lGL -lGLU -lglut -lGLEW
+main.o: main.cpp mat-yjc-new.h
+	g++ -c -lGL -lGLU -lglut -lGLEW main.cpp 
+InitShader.o: InitShader.cpp mat-yjc-new.h
+	g++ -c -lGL -lGLU -lglut -lGLEW InitShader.cpp
 clean:
-	rm output
+	rm *.o output
