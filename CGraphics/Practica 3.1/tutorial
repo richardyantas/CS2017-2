@@ -1,0 +1,17 @@
+
+glVertexAtribPointer:
+	Define an array of generic vertex attribute data
+
+void glVertexAttribPointer(GLuint index,GLint size,GLenum type,GLboolean normalized,GLsizei stride,const GLvoid* pointer);
+
+glUniform:
+	Specify the value of a uniform variable for the current program object
+	void glUniform1f( 	GLint location,
+  	GLfloat v0);
+
+glGetUniformLocation:
+	Returns the location of a uniform variable
+GLint glGetUniformLocation(GLuint program,const GLchar *name)
+
+
+https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetUniformLocation.xhtml
